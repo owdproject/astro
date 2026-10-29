@@ -1,0 +1,54 @@
+{
+  "name": "@owdproject/astro",
+  "version": "4.0.0-alpha.3",
+  "description": "Official Astro & Multi-Framework Islands / Custom Element adapter for @owdproject/core",
+  "homepage": "https://github.com/owdproject/astro#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owdproject/astro.git"
+  },
+  "author": {
+    "name": "Diego Villa (@dxlliv)",
+    "url": "https://github.com/dxlliv"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "tag": "alpha",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "dependencies": {
+    "@owdproject/core": "^4.0.0-alpha.3"
+  },
+  "peerDependencies": {
+    "astro": ">=4.0.0 || >=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "astro": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "build": "unbuild",
+    "prepack": "unbuild"
+  },
+  "devDependencies": {
+    "unbuild": "^3.6.1",
+    "typescript": "~6.0.3"
+  }
+}
